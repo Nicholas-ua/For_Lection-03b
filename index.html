@@ -8,41 +8,55 @@
 </head>
 <body>
     
-    <form method="post" action="https://formspree.io/smm1@ukr.net">
-        <label>Client name:
-            <input type="text" name="client-name" required placeholder="Your name">
-        </label>
+    <form method="post" action="https://formspree.io/smm1@ukr.net" name="contact-form">
+        <fieldset>
+            <fieldset>
+                <label>Client name:
+                    <input type="text" name="client-name" required placeholder="Your name">
+                </label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <label for="client-email">Client email:</label>
+                <input type="email" name="client-email" id="client-email" required>
+            </fieldset>
+            <br>
+            <fieldset>
+                <label>Password:
+                    <input type="password" name="client-password" required>
+                </label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <label>Gender:</label>
+                <br>
+                <label>
+                    <input type="radio" name="client-gender" value="male">
+                    Male
+                </label>
+                <label>
+                    <input type="radio" name="client-gender" value="female">
+                    Female
+                </label>
+                <label>
+                    <input type="radio" name="client-gender" value="other" checked>
+                    Other
+                </label>
+            </fieldset>
+            <br>
+            <fieldset>
+                <label>Car plate number:
+                    <input type="text" name="car-plate" required 
+                    pattern="[A-Z]{2}[\d]{4}[A-Z]{2}"
+                    placeholder="AA1234BB"
+                    title="AA1234BB">
+                </label>
+            </fieldset>
+            <br>
+            <input type="submit" value="SEND">
+            <input type="reset" value="BLANK">
+        </fieldset>
         <br>
-        <label for="client-email">Client email:</label>
-        <input type="email" name="client-email" id="client-email" required>
-        <br>
-        <label>Password:
-            <input type="password" name="client-password" required>
-        </label>
-        <br>
-        <label>Gender:</label>
-        <label>
-            <input type="radio" name="client-gender" value="male">
-            Male
-        </label>
-        <label>
-            <input type="radio" name="client-gender" value="female">
-            Female
-        </label>
-        <label>
-            <input type="radio" name="client-gender" value="other" checked>
-            Other
-        </label>
-        <br>
-        <label>Car plate number:
-            <input type="text" name="car-plate" required 
-            pattern="[A-Z]{2}[\d]{4}[A-Z]{2}"
-            placeholder="AA1234BB"
-            title="AA1234BB">
-        </label>
-        <br>
-        <input type="submit" value="SEND">
-        <input type="reset" value="BLANK">
     </form>
 
 </body>
